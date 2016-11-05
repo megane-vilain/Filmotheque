@@ -1,0 +1,17 @@
+<div ng-hide="user == null" class="ng-hide index_bar">
+  <nav class=" navbar-inverse">
+    <a href="#/profil"><img style="border-radius: 50%; margin-right:2%" ng-src="{{Img_Profil_Url}}"/></a>     
+    <a href="#/popular" class="btn btn-primary-outline button-navbar">Films Populaires</a>
+    <a href="#/upcoming" class="btn btn-primary-outline button-navbar">Prochaines sorties</a> 
+    <a href="#/my_movies" class="btn btn-primary-outline button-navbar ">Mes Films</a>
+    <a href="#/profil" class="btn btn-primary-outline button-navbar">Mon profil</a>
+    <button class="btn btn-danger-outline button-navbar" type="submit" ng-click="Deconnexion()">Deconnexion</button>
+    <form class="form-inline pull-xs-right">
+      <input class="form-control" type="text" placeholder="Titre" ng-model="Title">
+      <button class="btn btn-danger" type="submit" ng-click="Search()">Rechercher</button>
+    </form>
+  </nav>
+</div>
+
+
+ 

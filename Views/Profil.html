@@ -1,0 +1,65 @@
+<div class="row Profil">
+    <div class="col-sm-9 col-sm-offset-2 jumbotron" style="margin-top:15%">
+	 	<div>
+	 		<h4 style="text-decoration: underline">Réseaux sociaux:</h4>
+		 	<div class="social-login-buttons">
+		 		<button class="btn btn-info social-login-buttons ng-hide" ng-hide="Twitter_Provider" ng-click="Twitter_Link_Account()">
+					<i class="fa fa-twitter"></i> Connect my Twitter account
+				</button>
+				<button class="btn btn-info social-login-buttons ng-hide" ng-show="Twitter_Provider" ng-click="Unlick_Twitter()">
+					<i class="fa fa-twitter"></i> Unconnect my Twitter account
+				</button>
+				<button type="button" class="btn btn-primary social-login-buttons ng-hide" ng-hide="Facebook_Provider" ng-click="Facebook_Link_Account()">
+				    <i class="fa fa-facebook"></i> Connect my Facebook account
+				</button>
+				<button class="btn btn-primary social-login-buttons ng-hide" ng-show="Facebook_Provider" ng-click="Unlick_Facebook()">
+					<i class="fa fa-facebook"></i> Unconnect my Facebook account
+				</button>
+				<button class="btn btn-danger social-login-buttons ng-hide" ng-hide="Google_Provider" ng-click="Google_Link_Account()">
+				    <i class="fa fa-google-plus"></i> Connect my Google+ account
+				</button>
+				<button class="btn btn-danger social-login-buttons ng-hide" ng-show="Google_Provider" ng-click="Unlick_Google()">
+					<i class="fa fa-google-plus"></i> Unconnect my Google+ account
+				</button>
+			</div>
+		</div>
+		<hr>
+		<h4 style="text-decoration: underline">Paramètres:</h4>
+		<div class="container" style="margin-left:10%">
+			<form>
+				<fieldset class="form-group row">
+					<legend class="col-form-legend col-md-2"><span style="text-decoration:underline">Langue:</span></legend>
+					<div class="col-md-10">
+						<div class="form-check">
+							<label class="form-check-label" style="text-align:center">
+			        			<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="en" checked ng-model="Language">
+			        			Anglais
+			      			</label>
+						</div>
+						<div class="form-check">
+			    			<label class="form-check-label">
+			        			<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="fr" ng-model="Language">
+			        			Français
+			      			</label>
+			    		</div>
+			    	</div>
+				</fieldset>
+				<button class="btn btn-success" ng-click="Save_Data()">Sauvegarder les modifications</button>
+				<div class="alert alert-success alert-dismissible fade in ng-hide" role="alert" ng-show="Hide_Alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    				<span aria-hidden="true">&times;</span>
+  				</button>
+ 				<strong>Les modifications ont été enregistrées</strong>
+			</div>
+			</form>
+		</div>
+		<hr>
+		<div style="text-align:center">
+			<button class="btn btn-danger"  ng-click="Delete_Account()">Delete my account</button>	
+		</div>
+	</div>
+</div>
+
+
+
+
