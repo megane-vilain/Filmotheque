@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<div id="top" class="container-fluid">
+	<div ng-repeat="movie in movies">
+		<div style="height:350px" class="movie-view-polaroid container-fluid col-md-4">
+			<a href="#/view/{{movie.id}}" title="{{movie.title}}">
+				<img ng-src="{{movie.poster_path}}" style="width:100%;" alt={{movie.title}}>
+			</a>
+			<div class="movie-view-container">
+				<p>{{movie.title}}</p>
+				<p>{{movie.release_date | date: 'dd MMMM yyyy'}}</p>
+				<i class="fa fa-star fa 2w"></i> {{movie.vote_average}}
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<button ng-show="current_page !=1" class="col-md-2 btn btn-primary-outline btn-navigation ng-hide" ng-click="Precedent()"><span style="font-weight:bold">Précedent</span></button>
+	</div>
+	<div class="col-md-4 ">
+		<span style="margin-left:30%;margin-right:30%;font-size:120;font-weight:bold;" >Page {{current_page}}  / {{total_pages}}</span>
+	</div>
+	<div class="col-md-4">
+		<button ng-show="current_page !=total_pages"class="col-md-2 btn btn-primary-outline btn-navigation ng-hide" ng-click="Suivant()"><span style="font-weight:bold">Suivant</span></button>
+	<div>
+</div>

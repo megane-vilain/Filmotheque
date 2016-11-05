@@ -1,0 +1,164 @@
+body { 
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+	background: url(Medias/Watchmen.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+a, a:hover, a:focus {
+	color: #de615e;
+	text-decoration: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.form-box {
+	margin-top: 150px;
+}
+.btn-link-1 {
+	display: inline-block;
+	height: 50px;
+	margin: 5px;
+	padding: 16px 20px 0 20px;
+	background: #de615e;
+	font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #fff;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+.btn-link-2 {
+	display: inline-block;
+	height: 50px;
+	margin: 5px;
+	padding: 15px 20px 0 20px;
+	background: rgba(0, 0, 0, 0.3);
+	border: 1px solid #fff;
+	font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #fff;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+.btn-link:hover, .btn-link-2:focus, 
+.btn-link:active, .btn-link-2:active:focus { outline: 0; opacity: 0.6; background: rgba(0, 0, 0, 0.3); color: #fff; }
+.form-top {
+	overflow: hidden;
+	padding: 0 25px 15px 25px;
+	background: #444;
+	background: rgba(0, 0, 0, 0.40);
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	text-align: left;
+}
+
+.form-top-left {
+	float: left;
+	width: 75%;
+	padding-top: 25px;
+}
+
+.form-top-left h3 { margin-top: 0; color: #fff; }
+
+.form-top-right {
+	float: left;
+	width: 25%;
+	padding-top: 5px;
+	font-size: 66px;
+	color: #fff;
+	line-height: 100px;
+	text-align: right;
+	opacity: 0.3;
+}
+
+.form-bottom {
+	padding: 25px 25px 30px 25px;
+	background: #444;
+	background: rgba(0, 0, 0, 0.25);
+	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+	text-align: center;
+}
+
+.form-bottom form button.btn {
+	width: 100%;
+}
+.form-bottom h5 {
+	text-align: left;
+	text-decoration:underline;
+}
+
+
+.form-bottom form .input-error {
+	border-color: #de615e;
+}
+
+.social-login-buttons {
+	text-align: center;
+	margin-right: 2%;
+}
+.button-navbar
+{
+	background-color: white;
+	margin-right: 1%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.My_movies_view
+{
+	background: rgba(0, 0, 0, 0.2);
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.movie-view-polaroid
+{
+	width: 180px;
+  	background: #444;
+	background: rgba(0, 0, 0, 0.35);
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	margin-bottom: 2%;
+  	margin-left: 3%;
+  	margin-top: 2%;	
+}
+div.movie-view-container
+{
+	text-align: center;
+  	font-weight: bold;
+  	background.color:rgba(0, 0, 0, 0.3);
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	font-size: 100%;
+}
+.Infos_Movie
+{
+	margin-top: 25px;
+	color:#6495ED;
+}
+.Profil
+{
+	color:#6495ED;
+}
+.profil_container 
+{
+	border: solid;
+	background-color: black;
+}
+.btn-navigation
+{
+	background-color: white;
+	width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-right: 30%;
+	margin-left: 30%;
+}
+.navbar_my-movies
+{
+	border: solid;
+	border-radius: 8px;
+	border-color: rgba(0,0,0,0.50);
+}
+.button_my_movies
+{
+	width:75%;
+	margin-right: 1%;
+}
