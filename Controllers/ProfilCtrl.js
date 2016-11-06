@@ -142,6 +142,8 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Delete_Account = function()
 	{
 		var user = firebase.auth().currentUser;
+		DatabaseService.Delete_Data_User(user.uid);
+
 		user.delete().then(function() 
 			{
 				// User deleted.
