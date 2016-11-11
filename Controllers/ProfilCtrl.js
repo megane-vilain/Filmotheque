@@ -163,5 +163,4 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 		$scope.Hide_Alert = true;	
 		console.log($scope.Hide_Alert);
 	}
-
 });

@@ -3,6 +3,11 @@ angular.module('movieApp').factory('DatabaseService',function()
 	var factory = {};
 
 	//Récupére la liste des films de l'utilisateur
+	factory.Add_User =function()
+	{
+		var updates={};
+		updates['/users/' + User_id ];
+	}
 	factory.Get_Movies = function(User_id)
 	{
 		return firebase.database().ref('users/' + User_id + '/movies/').once('value').then(function(snapshot)
