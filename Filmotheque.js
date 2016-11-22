@@ -20,13 +20,13 @@ angular.module('movieApp').config(['$routeProvider',function($routeProvider)
 		)
 		  .when('/search/:Title',
 			{
-				templateUrl:'Views/Search.html',
+				templateUrl:'Views/View_Movies.html',
 				controller: 'SearchCtrl'
 			}
 		)
 			.when('/upcoming',
 			{
-				templateUrl:'Views/Upcoming.html',
+				templateUrl:'Views/View_Movies.html',
 				controller: 'UpcomingCtrl'
 			}
 		)

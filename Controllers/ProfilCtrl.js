@@ -4,8 +4,8 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	{
 	    if (user) 
 	    {
-			var auth = firebase.auth();
-			var user = firebase.auth().currentUser;
+			$scope.auth = firebase.auth();
+			$scope.user = firebase.auth().currentUser;
 			var provider = [];
 			user.providerData.forEach(function (profile) 
 			{
@@ -52,7 +52,11 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Google_Link_Account = function()
 	{
 		var provider = new firebase.auth.GoogleAuthProvider();
+<<<<<<< HEAD
 		auth.currentUser.linkWithRedirect(provider).then(function()
+=======
+		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
+>>>>>>> Developpement
 		{
 			$scope.$apply(function()
 			{
@@ -68,7 +72,11 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Twitter_Link_Account = function()
 	{
 		var provider = new firebase.auth.TwitterAuthProvider();
+<<<<<<< HEAD
 		auth.currentUser.linkWithRedirect(provider).then(function()
+=======
+		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
+>>>>>>> Developpement
 		{
 			$scope.$apply(function()
 			{
@@ -83,7 +91,11 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Facebook_Link_Account = function()
 	{
 		var provider = new firebase.auth.FacebookAuthProvider();
+<<<<<<< HEAD
 		auth.currentUser.linkWithRedirect(provider).then(function()
+=======
+		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
+>>>>>>> Developpement
 		{
 			$scope.$apply(function()
 			{
@@ -97,7 +109,7 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Unlick_Facebook = function()
 	{
 		var providerId = "facebook.com";
-		user.unlink(providerId).then(function() 
+		$scope.user.unlink(providerId).then(function() 
 		{
 			// Auth provider unlinked from account
 			$scope.$apply(function()
@@ -113,7 +125,7 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Unlick_Google = function()
 	{
 		var providerId = "google.com";
-		user.unlink(providerId).then(function() 
+		$scope.user.unlink(providerId).then(function() 
 		{
 			// Auth provider unlinked from account
 			$scope.$apply(function()
@@ -127,7 +139,7 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Unlick_Twitter = function()
 	{
 		var providerId = "twitter.com";
-		user.unlink(providerId).then(function() 
+		$scope.user.unlink(providerId).then(function() 
 		{
 			// Auth provider unlinked from account
 			$scope.$apply(function()
@@ -141,8 +153,7 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 
 	$scope.Delete_Account = function()
 	{
-		var user = firebase.auth().currentUser;
-		DatabaseService.Delete_Data_User(user.uid);
+		DatabaseService.Delete_Data_User($scope.user.uid);
 
 		user.delete().then(function() 
 			{
