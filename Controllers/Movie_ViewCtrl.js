@@ -70,7 +70,7 @@ angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesSer
 
 	$scope.id = $routeParams.id;
 
-	var tmdburl = "https://api.themoviedb.org/3/movie/";
+	var tmdburl = "https://api.themoviedb.org/3/";
 	var apiKey = 'f9fcc60c238c6f2f647bfb195f28a447';
 
 	firebase.auth().onAuthStateChanged(function(user) 
@@ -96,7 +96,14 @@ angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesSer
 			});
 			firebase.database().ref('users/' + firebase.auth().currentUser.uid + '/config/Language').once('value').then(function(snapshot)
 			{
-				var url = tmdburl + $scope.id + "?append_to_response=credits,videos&api_key=" + apiKey+"&language=" + snapshot.val();
+				if (snapshot.val()!=null)
+				{
+					var url = tmdburl  + "movie/" + $scope.id + "?append_to_response=credits,videos&api_key=" + apiKey+"&language=" + snapshot.val();
+				}
+				else
+				{
+					var url = tmdburl  + "movie/" + $scope.id + "?append_to_response=credits,videos&api_key=" + apiKey+"&language=en";
+				}
 
 				MoviesService.LoadMovies(url).then(function(Data_Movie)
 				{
@@ -106,19 +113,17 @@ angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesSer
 					{
 						$scope.movie.vote_average = "Aucun avis";
 					}
-					if ($scope.movie.videos.results.length >0)
+					if ($scope.movie.belongs_to_collection != null)
 					{
-						$scope.Hide_Youtube = true;
-						if ($scope.movie.videos.results.length != 1)
+						var url = tmdburl + "collection/" +$scope.movie.belongs_to_collection.id + "?api_key=" + apiKey+"&language=" + snapshot.val();
+						MoviesService.LoadMovies(url).then(function(Data_Collection)
 						{
-							$scope.Hide_Controls_Youtube = true;
-						}
+							$scope.Collection = Data_Collection;
+						}).catch(function(error)
+						{
+							console.log("An error happened : " +error);
+						});
 					}
-					else
-					{
-						$scope.Hide_Youtube = false;
-					}
-
 				}).catch(function(error)
 				{
 					console.log("An error happened : " +error);

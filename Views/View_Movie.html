@@ -51,6 +51,11 @@
 			<h3 style="text-decoration: underline;font-weight: bold">{{video.name}}:</h3>
 			<iframe width="100%"  height="555"  src={{getIframeSrc(video.key)}} allowfullscreen frameborder="0"></iframe>
 			<hr>
-		<div>
+		</div>
+		<div class="container-fluid">
+			<div ng-repeat="movie in Collection.parts" class="container-fluid col-xs-2 ">
+				<a href="#/view/{{movie.id}}" title="{{movie.title}}"><img ng-src="https://image.tmdb.org/t/p/w370{{movie.poster_path}}" width="50%" ></a>
+			</div>
+		</div>	
 	</div>
 </div>
