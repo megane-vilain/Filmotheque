@@ -5,7 +5,7 @@ angular.module('movieApp').factory('ConnexionService',function()
 	factory.Connexion = function(provider)
 	{
 		var auth = firebase.auth();
-		auth.signInWithPopup(provider).then(function(result) 
+		auth.signInWithRedirec(provider).then(function(result) 
 		{
 			// Sign-in successful.
 		}).catch(function(error) 
