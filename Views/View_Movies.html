@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <div id="top" class="container-fluid">
 	<div ng-repeat="movie in movies">
-		<div style="height:350px" class="movie-view-polaroid container-fluid col-md-4">
+		<div style="height:300px" class="movie-view-polaroid container-fluid col-md-4">
 			<a href="#/view/{{movie.id}}" title="{{movie.title}}">
 				<img ng-src="{{movie.poster_path}}" style="width:100%;" alt={{movie.title}}>
 			</a>
 			<div class="movie-view-container">
-				<a href="#/view/{{movie.id}}" title="{{movie.title}}"><p>{{movie.title}}</p></a>
+				<!-- <a href="#/view/{{movie.id}}" title="{{movie.title}}"><p>{{movie.title}}</p></a> -->
 				<p>{{movie.release_date | date: 'dd MMMM yyyy'}}</p>
+				<div checkdirective></div checkdirective>
 			</div>
 		</div>	
 	</div>
