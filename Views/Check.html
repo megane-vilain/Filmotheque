@@ -1,0 +1,6 @@
+<div ng-init="Check_Movie(movie.id, movie)"> 	
+	<div class="col-xs-12">
+		<button style="width:100%" class="ng-hide btn btn-danger" ng-show="movie.database" ng-click="Delete_Movie(movie)">Supprimer</button>
+		<button style="width:100%" class="ng-hide btn btn-success" ng-hide="movie.database" ng-click="Add_Movie(movie)" >Ajouter</button>
+	</div>
+</div>
