@@ -13,6 +13,7 @@ angular.module('movieApp').directive('headerdirective', function () {
                     //renvoi sur la page mes films
                     $scope.$apply(function()
                     {
+
                         $scope.user  = firebase.auth().currentUser;
                         $scope.Img_Profil_Url = $scope.user.photoURL;
                         if ($location.url() == "/connexion" || $location.url() == "/connexion#top")
@@ -21,7 +22,7 @@ angular.module('movieApp').directive('headerdirective', function () {
                         }
                         else 
                         {
-                            
+
                         }
                         
                     });
@@ -42,7 +43,7 @@ angular.module('movieApp').directive('headerdirective', function () {
                 //Fonction de deconnexion
                 var moviesRef = firebase.database().ref('users/' + $scope.user.uid + '/movies/');
                 moviesRef.off();
-                ConnexionService.Deconnexion();  
+                ConnexionService.Deconnexion();
             }
             $scope.Search = function()
             {

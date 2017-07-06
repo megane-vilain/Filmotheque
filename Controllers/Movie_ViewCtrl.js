@@ -65,7 +65,6 @@ angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesSer
 	//Données servant à la requete 
 	$location.hash('');
 	$anchorScroll();
-	$location.hash('top');
 	$anchorScroll();
 
 	$scope.id = $routeParams.id;

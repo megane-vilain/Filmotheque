@@ -53,7 +53,6 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	{
 		var provider = new firebase.auth.GoogleAuthProvider();
 		auth.currentUser.linkWithRedirect(provider).then(function()
-		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
 		{
 			$scope.$apply(function()
 			{
@@ -69,11 +68,7 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Twitter_Link_Account = function()
 	{
 		var provider = new firebase.auth.TwitterAuthProvider();
-<<<<<<< HEAD
 		auth.currentUser.linkWithRedirect(provider).then(function()
-=======
-		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
->>>>>>> Developpement
 		{
 			$scope.$apply(function()
 			{
@@ -88,11 +83,7 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Facebook_Link_Account = function()
 	{
 		var provider = new firebase.auth.FacebookAuthProvider();
-<<<<<<< HEAD
 		auth.currentUser.linkWithRedirect(provider).then(function()
-=======
-		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
->>>>>>> Developpement
 		{
 			$scope.$apply(function()
 			{

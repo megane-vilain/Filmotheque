@@ -14,7 +14,7 @@ angular.module('movieApp').controller('View_MoviesCtrl',function($scope,$routePa
 	}
 	else if ($location.path() == "/upcoming")
 	{
-		url = tmdburl + "movie/upcoming&page=";
+		url = tmdburl + "movie/upcoming?page=";
 	}
 	else 
 	{
