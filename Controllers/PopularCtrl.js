@@ -4,6 +4,7 @@ angular.module('movieApp').controller('PopularCtrl',function($scope,$location,$a
 	{
 		MoviesService.LoadMovies(url_fini).then(function(data)
 		{
+		    console.log(url_fini);
 			$scope.movies = data.results;
 			$scope.total_pages = data.total_pages;
 			$scope.current_page = data.page;
