@@ -15,19 +15,19 @@ angular.module('movieApp').config(['$routeProvider',function($routeProvider)
 			.when('/popular',
 			{
 				templateUrl:'Views/View_Movies.html',
-				controller: 'PopularCtrl'
+				controller: 'View_MoviesCtrl'
 			}
 		)
 		  .when('/search/:Title',
 			{
 				templateUrl:'Views/View_Movies.html',
-				controller: 'SearchCtrl'
+				controller: 'View_MoviesCtrl'
 			}
 		)
 			.when('/upcoming',
 			{
 				templateUrl:'Views/View_Movies.html',
-				controller: 'UpcomingCtrl'
+				controller: 'View_MoviesCtrl'
 			}
 		)
 			.when('/my_movies',
