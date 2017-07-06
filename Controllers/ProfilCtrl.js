@@ -52,11 +52,8 @@ angular.module('movieApp').controller('ProfilCtrl',function($scope,ConnexionServ
 	$scope.Google_Link_Account = function()
 	{
 		var provider = new firebase.auth.GoogleAuthProvider();
-<<<<<<< HEAD
 		auth.currentUser.linkWithRedirect(provider).then(function()
-=======
 		$scope.auth.currentUser.linkWithRedirect(provider).then(function()
->>>>>>> Developpement
 		{
 			$scope.$apply(function()
 			{
