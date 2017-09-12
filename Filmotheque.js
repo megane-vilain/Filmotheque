@@ -54,9 +54,6 @@ angular.module('movieApp').config(['$routeProvider','$sceDelegateProvider','$mdT
 			}
 		);
 
-		//$mdThemingProvider.theme('default')
-    	//.dark();
-
 		$sceDelegateProvider.resourceUrlWhitelist
 		([
     	// Allow same origin resource loads.
@@ -64,7 +61,5 @@ angular.module('movieApp').config(['$routeProvider','$sceDelegateProvider','$mdT
     	// Allow loading from our assets domain.  Notice the difference between * and **.
     	'https://image.tmdb.org/**'
   		]);
-
-		
 	}
 ]);
