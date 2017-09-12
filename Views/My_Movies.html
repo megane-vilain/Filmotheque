@@ -1,0 +1,38 @@
+<H3 style="margin-left: 50%" ng-show="Hide_Movie =='true'">Films déjà visionnés</H1>
+<H3 style="margin-left: 50%" ng-hide="Hide_Movie =='true' ">Films à voir</H1>
+
+<div class="btn-group" style="margin-left: 5%">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filtres <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" >
+    <li ng-click="Vus()" >Films déjà visionnés</li>
+    <li ng-click="A_Voir()" >Films à voir</li>
+  </ul>
+</div>
+
+
+<div class="gridListdemoBasicUsage">
+
+	<div class='md-padding' layout="row" layout-wrap>
+        <md-card style="width: 200px;" ng-repeat="movie in User_Movies" ng-show="movie.status == Hide_Movie">
+        	<img ng-src={{movie.poster_url}} class="md-card-image" alt="movie-poster">
+        	<md-card-content>
+            	<a href="#/view/{{movie.id}}" title="{{movie.title}}">
+                <p>{{movie.title}}</p>
+              </a>
+          	</md-card-content>
+          	<div class="md-actions" layout="row" layout-align="end center">
+            	<md-button class="md-warn" ng-click="Delete_Movie(movie.id)" >Supprimer</md-button>
+            	<md-button class="ng-hide" ng-show="movie.status == 'false'" ng-click="Update_Movie(movie.id, movie.note_average, movie.poster_url, movie.release_date, movie.title,movie.status)" >Déja vu ?</md-button>
+            	<md-button class="ng-hide" ng-show="movie.status == 'true'" ng-click="Update_Movie(movie.id, movie.note_average, movie.poster_url, movie.release_date, movie.title,movie.status)" >À revoir ?</md-button>
+          	</div>
+      	</md-card>
+</div>
+
+  <div style="margin-top:10%">
+  	<h2 ng-show="Hide_Texte" class="ng-hide" style="text-align:center;font-weight:bold;color:weight"> Vous n'avez pas encore ajoutés de films</h2>
+    <md-progress-circular md-mode="indeterminate" ng-show="processing" style="margin-left:50%"></md-progress-circular>
+  </div>
+
+</div>

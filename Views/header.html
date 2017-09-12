@@ -1,0 +1,29 @@
+<div ng-hide="user == null" class="ng-hide index_bar">
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/my_movies">Accueil</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#/popular" data-toggle="collapse" data-target="#myNavbar" >Films populaires</a></li>
+            <li><a href="#/upcoming" data-toggle="collapse" data-target="#myNavbar" >Prochaines sorties</a></li>
+            <li><a href="#/my_movies" data-toggle="collapse" data-target="#myNavbar" >Mes films </a></li>
+            <li><a href="#/profil" data-toggle="collapse" data-target="#myNavbar" >Profil</a></li>
+            <form class="navbar-form navbar-left">
+                <input type="text" class="form-control" placeholder="Rechercher" ng-model="Title">
+                <button type="submit" class=" ng-hide btn btn-default" ng-click="Search()">Rechercher</button>
+            </form>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  type="submit" ng-click="Deconnexion()" ><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+</div>

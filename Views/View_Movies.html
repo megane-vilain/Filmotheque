@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="gridListdemoBasicUsage" id="top">
+
+	<div class='md-padding' layout="row" layout-wrap>
+        <md-card style="width: 200px;" ng-repeat="movie in movies" ng-show="movie.status == Hide_Movie">
+        	 <img ng-src={{movie.poster_path}} class="md-card-image" alt="movie-poster"> 
+        	<md-card-content>
+        		<a href="#/view/{{movie.id}}" title="{{movie.title}}">
+            		<p>{{movie.title}}</p>
+            	</a>
+            	<p>{{movie.release_date | date: 'dd MMMM yyyy'}}</p> 	
+          	</md-card-content>
+          	<div class="md-actions" layout="row" layout-align="end center">
+          	<div checkdirective></div>
+          	</div>
+      	</md-card>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<button type="button" ng-show="current_page !=1" class="col-md-2 btn btn-default btn-navigation ng-hide" ng-click="Precedent()"><span style="font-weight:bold">Précedent</span></button>
+	</div>
+	<div class="col-md-4 ">
+		<span style="margin-left:30%;margin-right:30%;font-size:120;font-weight:bold;" >Page {{current_page}}  / {{total_pages}}</span>
+	</div>
+	<div class="col-md-4">
+		<button type="button" ng-show="current_page !=total_pages"class="col-md-2 btn btn-default btn-navigation ng-hide" ng-click="Suivant()"><span style="font-weight:bold">Suivant</span></button>
+	<div>
+</div>
+
