@@ -80,8 +80,6 @@ angular.module('movieApp').controller('My_MoviesCtrl',function($scope,ConnexionS
 			var postData= {
 				title: title,
 				status: "true",
-				note_average : note_average, 
-				release_date : release_date,	
 				poster_url: poster_url,
 				id: id
 			};	
@@ -90,9 +88,7 @@ angular.module('movieApp').controller('My_MoviesCtrl',function($scope,ConnexionS
 		{
 			var postData= {
 				title: title,
-				status: "false",
-				note_average : note_average, 
-				release_date : release_date,	
+				status: "false",	
 				poster_url: poster_url,
 				id: id
 			};

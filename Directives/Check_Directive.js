@@ -42,9 +42,7 @@ angular.module('movieApp').directive('checkdirective', function () {
                 $scope.status = "false";
                 var postData= {
                     title: movie.title,
-                    status: $scope.status,
-                    note_average : movie.vote_average, 
-                    release_date : movie.release_date,  
+                    status: $scope.status,   
                     poster_url: movie.poster_path,
                     id: movie.id
                 };

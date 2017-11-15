@@ -24,8 +24,8 @@
           	</md-card-content>
           	<div class="md-actions" layout="row" layout-align="end center">
             	<md-button class="md-warn" ng-click="Delete_Movie(movie.id)" >Supprimer</md-button>
-            	<md-button class="ng-hide" ng-show="movie.status == 'false'" ng-click="Update_Movie(movie.id, movie.note_average, movie.poster_url, movie.release_date, movie.title,movie.status)" >Déja vu ?</md-button>
-            	<md-button class="ng-hide" ng-show="movie.status == 'true'" ng-click="Update_Movie(movie.id, movie.note_average, movie.poster_url, movie.release_date, movie.title,movie.status)" >À revoir ?</md-button>
+            	<md-button class="ng-hide" ng-show="movie.status == 'false'" ng-click="Update_Movie(movie.id, movie.poster_url, movie.title,movie.status)" >Déja vu ?</md-button>
+            	<md-button class="ng-hide" ng-show="movie.status == 'true'" ng-click="Update_Movie(movie.id, movie.poster_url, movie.title,movie.status)" >À revoir ?</md-button>
           	</div>
       	</md-card>
 </div>
