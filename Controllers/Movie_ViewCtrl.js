@@ -1,7 +1,9 @@
 angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesService,$sce,$routeParams,$location,$anchorScroll,DatabaseService)
 { 	
-	//Nombres de vidéos à afficher
+	//Variables
 	$scope.video_quantity = 3;
+	poster_size = "w342";
+	backdrop_size = "orignial";
 
 	//Resconstrution de l'url de la vidéo youtube avant de l'afficher
 
@@ -110,8 +112,8 @@ angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesSer
 				MoviesService.LoadMovies(url).then(function(Data_Movie)
 				{
 					$scope.movie = Data_Movie;
-					$scope.movie.poster_path = MoviesService.Change_Url_Poster($scope.movie.poster_path,"w300");
-					$scope.movie.backdrop_path = MoviesService.Change_Url_Poster($scope.movie.backdrop_path,"original");
+					$scope.movie.poster_path = MoviesService.Change_Url_Poster($scope.movie.poster_path,poster_size);
+					$scope.movie.backdrop_path = MoviesService.Change_Url_Poster($scope.movie.backdrop_path,backdrop_size);
 
 					if( $scope.movie.vote_average == 0)
 					{
@@ -125,7 +127,7 @@ angular.module('movieApp').controller('Movie_ViewCtrl',function($scope,MoviesSer
 							$scope.Collection = Data_Collection;
 							for (var i = 0; i < $scope.Collection.parts.length; i++) 
 							{
-								$scope.Collection.parts[i].poster_path = MoviesService.Change_Url_Poster($scope.Collection.parts[i].poster_path, "w300");
+								$scope.Collection.parts[i].poster_path = MoviesService.Change_Url_Poster($scope.Collection.parts[i].poster_path, poster_size);
 							}	
 						}).catch(function(error)
 						{

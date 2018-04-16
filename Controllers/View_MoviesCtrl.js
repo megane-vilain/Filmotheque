@@ -4,6 +4,7 @@ angular.module('movieApp').controller('View_MoviesCtrl',function($scope,$routePa
 	var apiKey = 'f9fcc60c238c6f2f647bfb195f28a447';
 
 	$scope.page = 1;
+	poster_size = "w342";
 
 	var tmdburl = "https://api.themoviedb.org/3/";
 	var url = "";
@@ -35,7 +36,7 @@ angular.module('movieApp').controller('View_MoviesCtrl',function($scope,$routePa
 
 			for (var i = 0; i < $scope.movies.length; i++) 
 			{
-				$scope.movies[i].poster_path = MoviesService.Change_Url_Poster($scope.movies[i].poster_path, "w300");
+				$scope.movies[i].poster_path = MoviesService.Change_Url_Poster($scope.movies[i].poster_path, poster_size);
 			}	
 
 
